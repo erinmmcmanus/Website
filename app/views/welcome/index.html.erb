@@ -1,0 +1,65 @@
+<style>
+
+.header {
+	background-color: #BDBDBD;
+	top: 0;
+	width: 100%;
+	text-align: center;
+
+}
+
+.header a {
+	display: block;
+	padding: 30px 20px;
+	color: white;
+	font-size: 30px;
+}
+
+.header li {
+	display: inline-block;
+	margin-right: 25px;
+}
+
+.welcome h1 {
+	font-size: 45px;
+}
+
+.welcome p {
+	font-size: 25px;
+}
+
+
+.welcome {
+	text-align: center;
+	width: auto;
+}
+
+a {
+	text-decoration: none;
+	color: blue;	
+}
+
+a:visted {
+	text-decoration: none;
+	color: inherit;
+}
+
+</style>
+
+<div class = 'header'>
+	<ul>
+		<li><%= link_to 'Profiles', controller: 'profiles' %></li>
+		<li><%= link_to 'Resources', controller: 'resources_page' %></a></li>
+		<li><a href = ''>About</a></li>
+	</ul>
+</div>
+
+<div class = 'welcome'>
+	<h1>Welcome</h1>
+
+	<p>This is a website that is dedicated to helping people find tutors! If you are looking for a tutor, click <a href = "../profiles#index">here</a> to find a list of tutors. If you are looking to register as a tutor, click <a href = "../profiles/new">here</a>.</p>
+</div>
+
+
+
+

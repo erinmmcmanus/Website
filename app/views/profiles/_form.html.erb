@@ -1,0 +1,56 @@
+<%= form_for @profile, :html => { :multipart => true } do |form| %>
+ 
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@profile.errors.count, "error") %> prohibited
+        this profile from being saved:
+      </h2>
+      <ul>
+        <% @profile.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :flname %><br>
+    <%= form.text_field :flname %>
+  </p>
+ 
+  <p>
+    <%= form.label :subjects %><br>
+    <%= form.text_area :subjects %>
+  </p>
+
+  <p>
+    <%= form.label :age %><br>
+    <%= form.text_area :age %>
+  </p>
+
+  <p>
+    <%= form.label :phonenumber %><br>
+    <%= form.text_area :phonenumber %>
+  </p>
+
+  <p>
+    <%= form.label :email %><br>
+    <%= form.text_area :email %>
+  </p>
+
+  <p>
+    <%= form.label :experience %><br>
+    <%= form.text_area :experience %>
+  </p>
+
+  <p>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>

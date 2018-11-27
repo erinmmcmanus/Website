@@ -1,0 +1,30 @@
+<style>
+
+.comment {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+#name {
+	font-style: italic;
+	color: gray;
+}
+</style>
+
+<div class = 'comment'>
+<p>
+  <div id = 'name'>
+  <%= comment.commenter %>
+</div>
+</p>
+ 
+<p>s
+  <%= comment.body %>
+</p>
+
+<p>
+	<%= link_to 'Destroy Comment', [comment.profile, comment],
+				 method: :delete,
+				 data: { confrim: 'Are you sure?' } %>
+</p>
+</div>

@@ -1,0 +1,39 @@
+<style>
+
+.all_profiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+}
+
+.profile {
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+ 
+}
+
+</style>
+
+<h1>Tutor Profiles</h1>
+
+<%= link_to 'New Profile', new_profile_path %>
+ 
+ <div class = 'all_profiles'>
+  <% @profiles.each do |profile| %>
+    <div class = 'profile' >
+      <h2><%= profile.flname %></h2>
+      <h2><%= profile.subjects %></h2>
+      <h2><%= profile.age %></h2>
+      <h2><%= profile.phonenumber %></h2>
+      <h2><%= profile.email %></h2>
+      <h2><%= profile.experience %></h2>
+      <h2><%= link_to 'Show', profile_path(profile) %></h2>
+      <h2><%= link_to 'Edit', edit_profile_path(profile) %></h2>
+      <h2><%= link_to 'Destroy', profile_path(profile),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></h2>
+    </div>
+  <% end %>
+</div>
