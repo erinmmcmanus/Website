@@ -1,47 +1,50 @@
 <style>
-
 .header {
-	background-color: #BDBDBD;
+	background-color: #595a5b;
 	top: 0;
 	width: 100%;
 	text-align: center;
+	font-family: "Gill Sans", sANS-serif;
 
 }
-
 .header a {
 	display: block;
 	padding: 30px 20px;
 	color: white;
 	font-size: 30px;
-}
-
+	}
 .header li {
 	display: inline-block;
 	margin-right: 25px;
+	text-align: center;
 }
-
 .welcome h1 {
 	font-size: 45px;
-}
 
+}
 .welcome p {
 	font-size: 25px;
+
 }
-
-
 .welcome {
 	text-align: center;
 	width: auto;
-}
+	font-family: "Helvetica", sANS-serif;
 
+}
 a {
 	text-decoration: none;
-	color: blue;	
+	color: #2B96F1;	
 }
-
 a:visted {
 	text-decoration: none;
 	color: inherit;
+}
+
+#tree {
+	margin: auto;
+	display: block;
+	width: 40%;
 }
 
 </style>
@@ -57,9 +60,9 @@ a:visted {
 <div class = 'welcome'>
 	<h1>Welcome</h1>
 
-	<p>This is a website that is dedicated to helping people find tutors! If you are looking for a tutor, click <a href = "../profiles#index">here</a> to find a list of tutors. If you are looking to register as a tutor, click <a href = "../profiles/new">here</a>.</p>
+	<p>The goal of this website is to facilitate the connection between tutors and those looking for tutors. We hope to bring you find qualified tutors near you. If you are looking for a tutor, go to the following link to find a list of <a href = "../profiles#index">tutors</a>. If you are looking to register as a tutor, click <a href = "../profiles/new">here</a>.</p>
 </div>
 
-
-
-
+<div id = 'tree'>
+	<%= image_tag("tree1.png") %>
+</div>
