@@ -1,0 +1,40 @@
+<style>
+
+.header {
+		background-color: #595a5b;
+		top: 0;
+		width: 100%;
+		text-align: center;
+		font-family: "Gill Sans", sans-serif;
+
+	}
+	
+	.header li {
+		display: inline-block;
+		margin-right: 25px;
+		text-align: center;
+	}
+
+	.header a {
+		display: block;
+		padding: 30px 20px;
+		color: white;
+		font-size: 30px;
+		text-decoration: none;
+	}
+
+	.header a:visted {
+		text-decoration: none;
+		color: inherit;
+	}
+
+</style>
+
+<div class = 'header'>
+	<ul>
+		<li><%= link_to'Home', controller: 'welcome' %></li>
+		<li><%= link_to 'Profiles', controller: 'profiles' %></li>
+		<li><%= link_to 'Resources', controller: 'resources_page' %></a></li>
+		<li><%= link_to'About', controller: 'about' %></li>
+	</ul>
+</div>
